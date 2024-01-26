@@ -6,6 +6,10 @@
 body{
     margin: 0%;
     padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
@@ -49,19 +53,23 @@ header{
     border-radius: 20px;
     padding: 5px 15px 5px 15px;
     font-size: 20px;
-    color: rgb(211, 22, 22);
+    color:  #bf0615;
+    transition-property: background ;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
 }
 
 .navbar__button:hover{
-    background-color: rgb(211, 22, 22);
+    background-color:  #bf0615;
     color: white;
+
     
 }
 
 section{
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: min(1800px, 100vw);
     justify-content: center;
     align-items: center;
 }
@@ -106,14 +114,14 @@ section{
 h1{
     font-size: 40px;
     margin: 0%;
-    color: rgb(211, 22, 22);
+    color:  #bf0615;
 }
 
 
 
 h2{
     font-size: 25px;
-    color: rgb(211, 22, 22);
+    color:  #bf0615;
 }
 
 .section__about__wraper{
@@ -128,7 +136,10 @@ h2{
     background-color: rgb(255, 255, 255);
     overflow: auto;
     width: 50%;
-    padding: 20px 20px 20px 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .section__about__gallery__img{
@@ -145,14 +156,14 @@ h2{
 .section__about__gallery__img:hover{
 padding: 3px;
 
-background-color: red;
+background-color: #bf0615;
 
 }
 
 .section__about__column{
-    width: 25%;
+    width: max(200px, 25%);
     background-color: white;
-    margin: 5PX;
+    margin: 0px;
 
 }
 
@@ -166,9 +177,14 @@ background-color: red;
     padding: 50px;
 }
 
+.section__about__info p{
+    color: black;
+}
+
 .section__products{
     flex-direction: column;
-    background-color: yellow;
+    background-color: #fecd01;
+
 
 }
 
@@ -186,7 +202,7 @@ background-color: red;
 
 .section__products__item{
     margin: 20px;
-    background-color: rgb(255, 0, 0);
+    background-color:  #bf0615;
     width: 300px;
     height: 500px;
     border-radius: 20px;
@@ -206,12 +222,23 @@ background-color: red;
 }
 
 .button{
-    background-color: red;
+    background-color:  #bf0615;
     padding: 20px;
     width: 200px;
     border-radius: 20px;
     border: solid 0px;
     color: white;
+    transition-property: background;
+    transition-timing-function: ease;
+    transition-duration: 0.7s;
+    border: 2px solid #bf061500;
+}
+
+.button:hover{
+ background-color: #ffffff00;
+    color: #bf0615;
+    border: 2px solid #bf0615;
+
 }
 
 .section__recipes{
@@ -271,13 +298,14 @@ background-color: red;
     margin: 20px ;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-}
+    display: flex;
+justify-content: flex-end;}
 
 .recipe__container h1{
     color: rgb(255, 255, 255);
     font-size: 90px;
-    position: relative;
-    left: 60%;
+    margin-right: 20PX;
+
     text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
     
 
@@ -300,4 +328,91 @@ background-color: red;
     background-image: url(assets/recipes/Salads.png);
     background-position: center;
     background-size: cover;
+}
+
+
+@media (max-width: 1200px){
+    body{
+        background-color: #bf0615;
+    }
+}
+
+@media (max-width: 992px){
+    body{
+        background-color: #17ff3d;
+    }
+
+    .section__main{
+        height: 70vh;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        background-color: #17a2ff;
+    }
+
+    .section__main{
+        height: 70vh;
+    }
+}
+
+@media (max-width: 375px){
+    body{
+        background-color: #9b229b;
+        width: 100vw;
+    }
+
+    section{
+        width: 100vw;
+    }
+
+    .section__main{
+        height: 30vh;
+
+    }
+
+    .section__main__slider{
+        width: 90vw;
+    }
+
+    .section__about__wraper{
+        flex-direction: column-reverse;
+    }
+
+    .section__about__gallery{
+        width: 100vw;
+    }
+
+    .section__about__info{
+        width: 100vw;
+    }
+
+    .section__main__slider{
+        width: 90%;
+    }
+
+    .section__recipes__wraper{
+        flex-direction: column;
+    }
+
+    .section__recipes__main{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .section__recipes__info{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .recipe__container{
+        width: 90%;
+        height: 120px;
+    }
+
+    .recipe__container h1{
+        font-size: 2rem ;
+    }
+
 }
