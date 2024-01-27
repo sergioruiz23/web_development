@@ -311,7 +311,7 @@ justify-content: flex-end;}
 
 .recipe__container h1{
     color: rgb(255, 255, 255);
-    font-size: 90px;
+    font-size: 2rem;
     margin-right: 20PX;
 
     text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
@@ -341,14 +341,14 @@ justify-content: flex-end;}
 
 @media (max-width: 1200px){
     body{
-        background-color: #bf0615;
+        background-color: #ffffff;
     }
 }
 
 @media (max-width: 1024px){
 
     body{
-        background-color: #17a2ff;
+        background-color: #ffffff;
     }
 
     .section__main{
@@ -382,7 +382,21 @@ justify-content: flex-end;}
         width: 50vw;
     }
 
+    .section__recipes__main h1{
+        font-size: 3rem;
+    }
 
+
+}
+
+@media (max-width: 890px){
+    .section__main__slider{
+        height: 200px;
+    }
+
+    .section__main{
+        height: 400px;
+    }
 }
 
 @media (max-width: 768px){
@@ -455,17 +469,20 @@ justify-content: flex-end;}
 
     .section__recipes__info{
         width: 100vw;
+        height: 50%;
     }
 
     .section__recipes__main{
-        display: none;
+        display: flex;
+        width: 100%;
+        height: 50%;
     }
 
 }
 
-@media (max-width: 414px){
+@media (max-width: 440px){
     body{
-        background-color: #9b229b;
+        background-color: #ffffff;
         width: 100vw;
     }
 
@@ -503,7 +520,8 @@ justify-content: flex-end;}
     }
 
     .section__recipes__main{
-        display: none;
+        display: flex;
+        width: 100vw;
     }
 
     .section__recipes__info{
@@ -524,7 +542,7 @@ justify-content: flex-end;}
 
 @media (max-width: 375px){
     body{
-        background-color: #9b229b;
+        background-color: #ffffff;
         width: 100vw;
     }
 
@@ -538,15 +556,28 @@ justify-content: flex-end;}
     }
 
     .section__main__slider{
-        width: 90vw;
+        width: 100vw;
+        height: 100%;
     }
+
+    .section__main__slider__button{
+        margin: 5px;
+    }
+
 
     .section__about__wraper{
         flex-direction: column-reverse;
     }
 
+
+
     .section__about__gallery{
         width: 100vw;
+        height: 90%;
+    }
+
+    .section__about__column{
+        width: 70%;
     }
 
     .section__about__info{
@@ -564,9 +595,14 @@ justify-content: flex-end;}
         display: none;
     }
 
+
+    .section__recipes{
+        height: 80vh;
+    }
+
     .section__recipes__info{
         width: 100vw;
-        height: 50vh;
+        height: 70vh;
     }
 
     .recipe__container{
@@ -574,7 +610,5 @@ justify-content: flex-end;}
         height: 120px;
     }
 
-    .recipe__container h1{
-        font-size: 2rem ;
-    }
+
 }
