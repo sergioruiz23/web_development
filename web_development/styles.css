@@ -1,0 +1,651 @@
+*{
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    width: 100vw;
+    height: 80px;
+   
+}
+
+
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 50px ;
+    
+}
+
+.header__navbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin-right: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__navbar div{
+    display: none;
+}
+
+.header__navbar ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+}
+
+.navbar__button{
+    margin: 0px 10px 0px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    font-size: 20px;
+    color:  #bf0615;
+    transition-property: background ;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+.navbar__button:hover{
+    background-color:  #bf0615;
+    color: white;
+
+    
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    width: min(1800px, 100vw);
+    justify-content: center;
+    align-items: center;
+}
+
+.section__main{
+    flex-direction: row;
+    height: 800px;
+    background-image: url(assets/background.png);
+    background-attachment: fixed;
+    padding: 1rem;
+    background-size: cover;
+
+}
+
+.slider_wraper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 20px;
+
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+
+}
+
+.slider_nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+.slider_btn{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: opacity ease 250ms;
+}
+
+
+
+.section__about{
+    flex-direction: column;
+    height: 900px;
+
+}
+
+.title__wraper{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+}
+
+h1{
+    font-size: 4rem;
+    margin: 0%;
+    color:  #bf0615;
+}
+
+
+
+h2{
+    font-size: 25px;
+    color:  #bf0615;
+}
+
+.section__about__wraper{
+    display: flex;
+    height: 700px;
+    flex-direction: row;
+
+}
+
+.section__about__gallery{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    width: 50%;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.section__about__gallery__img{
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    transition-property: padding;
+    border-radius: 20px;
+    transition-timing-function: smooth;
+    transition-duration: 60ms ;
+   
+}
+
+.section__about__gallery__img:hover{
+padding: 3px;
+
+background-color: #bf0615;
+
+}
+
+.section__about__column{
+    width: max(200px, 25%);
+    background-color: white;
+    margin: 0px;
+
+}
+
+.section__about__info{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.section__about__info p{
+    color: black;
+}
+
+.section__products{
+    flex-direction: column;
+    background-color: #fecd01;
+height: 1000px;
+}
+
+.section__products__wraper{
+   
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 20px 50px 20px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.section__products__item{
+    margin: 20px;
+    background-color:  #bf0615;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.section__products__item div{
+    width: 100%;
+    height: 370px;
+    border-radius: 100% 0% 100% 0% / 0% 74% 26% 100% ;
+    background-color: rgb(255, 255, 255);
+}
+
+.section__products__item h2 ,p{
+    color: white;
+    margin-left: 20px;
+}
+
+.button{
+    background-color:  #bf0615;
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+    border: solid 0px;
+    color: white;
+    transition-property: background;
+    transition-timing-function: ease;
+    transition-duration: 0.7s;
+    border: 2px solid #bf061500;
+}
+
+.button:hover{
+ background-color: #ffffff00;
+    color: #bf0615;
+    border: 2px solid #bf0615;
+
+}
+
+.section__recipes{
+    flex-direction: column;
+
+
+}
+
+.section__recipes__wraper{
+    display: flex;
+    height: 100%;
+
+}
+
+.section__recipes__main{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    padding-left: 100px;
+}
+
+.section__recipes h1{
+    margin-top: 50px;
+}
+
+.section__recipes p{
+    text-align: left;
+    color: black;
+    margin: 0px 0px 20px 0px;
+}
+
+.main__img{
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    background-image: url(assets/recipes/mainbg.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 20px 0px 20px 0px;
+    border-radius: 20px;
+    
+}
+
+.section__recipes__info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe__container{
+    width: 90%;
+    height: 200px;
+    margin: 20px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+justify-content: flex-end;}
+
+.recipe__container h1{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-right: 20PX;
+
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+    
+
+}
+
+.type1{
+    background-image: url(assets/recipes/desserts.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.type2{
+    background-image: url(assets/recipes/meats.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.type3{
+    background-image: url(assets/recipes/Salads.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (max-width: 1200px){
+    body{
+        background-color: #ffffff;
+    }
+}
+
+@media (max-width: 1024px){
+
+    body{
+        background-color: #ffffff;
+    }
+
+    .section__main{
+        height: 100vh;
+    }
+
+    .section__about__wraper{
+        flex-direction: row;
+    }
+
+    .section__about__gallery{
+        width: 50vw;
+
+    }
+
+    .section__about__info{
+        width: 50vw;
+    }
+
+
+
+    .section__recipes__wraper{
+        flex-direction: row;
+    }
+
+    .section__recipes__info{
+        width: 50vw;
+    }
+
+    .section__recipes__main{
+        width: 50vw;
+    }
+
+    .section__recipes__main h1{
+        font-size: 3rem;
+    }
+
+
+}
+
+@media (max-width: 890px){
+    .section__main__slider{
+        height: 200px;
+    }
+
+    .section__main{
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        background-color: #ffffff;
+    }
+
+    .header__navbar{
+        justify-content: flex-end;
+    }
+
+    .header__navbar ul{
+        display: none;
+    }
+
+    .header__navbar div{
+        display: flex;
+        height: 100px;
+
+    }
+
+    .section__main{
+        height: 50vh;
+    }
+
+    .section__about__wraper{
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .section__about__gallery{
+        width: 90vw;
+        padding: 0px;
+        height: 40vh;
+
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .section__about__column{
+        width: 50%;
+    }
+
+    .section__about__info{
+        width: 100vw;
+        height: 45vh;
+    }
+
+    .section__about__column{
+        width:25%;
+    }
+
+    .section__products__item{
+        width: 200px;
+        height: 300px;
+
+    }
+
+    .section__products__item div{
+            width: 100%;
+            height: 200px;
+    }
+
+    .section__recipes__wraper{
+        flex-direction: column;
+    }
+
+    .section__recipes__info{
+        width: 100vw;
+        height: 50%;
+    }
+
+    .section__recipes__main{
+        display: flex;
+        width: 100%;
+        height: 50%;
+    }
+
+}
+
+@media (max-width: 440px){
+    body{
+        background-color: #ffffff;
+        width: 100vw;
+    }
+
+    section{
+        width: 100vw;
+    }
+
+    .section__main{
+        height: 30vh;
+
+    }
+
+    .section__main__slider{
+        width: 90vw;
+    }
+
+    .section__about__wraper{
+        flex-direction: column-reverse;
+    }
+
+    .section__about__gallery{
+        width: 100vw;
+    }
+
+    .section__about__info{
+        width: 100vw;
+    }
+
+    .section__main__slider{
+        width: 90%;
+    }
+
+    .section__recipes__wraper{
+        flex-direction: column;
+    }
+
+    .section__recipes__main{
+        display: flex;
+        width: 100vw;
+    }
+
+    .section__recipes__info{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .recipe__container{
+        width: 90%;
+        height: 120px;
+    }
+
+    .recipe__container h1{
+        font-size: 2rem ;
+    }
+
+}
+
+@media (max-width: 375px){
+    body{
+        background-color: #ffffff;
+        width: 100vw;
+    }
+
+    section{
+        width: 100vw;
+    }
+
+    .section__main{
+        height: 30vh;
+
+    }
+
+    .section__main__slider{
+        width: 100vw;
+        height: 100%;
+    }
+
+    .section__main__slider__button{
+        margin: 5px;
+    }
+
+
+    .section__about__wraper{
+        flex-direction: column-reverse;
+    }
+
+
+
+    .section__about__gallery{
+        width: 100vw;
+        height: 90%;
+    }
+
+    .section__about__column{
+        width: 70%;
+    }
+
+    .section__about__info{
+        width: 100vw;
+    }
+
+    .section__main__slider{
+        width: 90%;
+    }
+
+    .section__recipes__wraper{
+        flex-direction: column;
+    }
+    .section__recipes__main{
+        display: none;
+    }
+
+
+    .section__recipes{
+        height: 80vh;
+    }
+
+    .section__recipes__info{
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .recipe__container{
+        width: 90%;
+        height: 120px;
+    }
+
+
+}
